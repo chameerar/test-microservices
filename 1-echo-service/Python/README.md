@@ -2,9 +2,8 @@
 
 # How to Run
 
-'''python -m pip install flask
+python -m pip install flask
 python -m flask --app echo run
-'''
 
 # Test the endpoint
 
