@@ -1,6 +1,6 @@
-# test-microservices
+# Micro service Load Deployment
 
-Microservices for testing kubernetes deployment in various languages
+Microservices for testing kubernetes deployment resource usage. Implemented in various languages.
 
 Echo-Service
 
