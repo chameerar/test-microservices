@@ -1,12 +1,18 @@
 # Echo Service Using Python-Flask
 
-# How to Run
+## Use case
 
-python -m pip install flask
-python -m flask --app echo run
+When the service is invoked with a message, the service will respond with the same message received via an HTTP POST.
 
-# Test the endpoint
+## How to Run
 
-curl --location 'http://127.0.0.1:5000/echo' \
---header 'Content-Type: application/json' \
---data '"Hello Word!"'
+`python -m pip install flask`
+`python echo.py`
+OR Using default port: 5000
+`python -m flask --app echo run`
+
+## Test the endpoint
+
+```
+curl -L 'http://localhost:8090/' -H 'Content-Type: application/json' -d '"Hello Word!"'
+```
