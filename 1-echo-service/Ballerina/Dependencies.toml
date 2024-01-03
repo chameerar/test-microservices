@@ -8,6 +8,18 @@ dependencies-toml-version = "2"
 distribution-version = "2201.8.4"
 
 [[package]]
+org = "anoshan"
+name = "echo"
+version = "0.1.0"
+dependencies = [
+	{org = "ballerina", name = "http"},
+	{org = "ballerinai", name = "observe"}
+]
+modules = [
+	{org = "anoshan", packageName = "echo", moduleName = "echo"}
+]
+
+[[package]]
 org = "ballerina"
 name = "auth"
 version = "2.10.0"
@@ -278,17 +290,5 @@ dependencies = [
 ]
 modules = [
 	{org = "ballerinai", packageName = "observe", moduleName = "observe"}
-]
-
-[[package]]
-org = "choreo"
-name = "echo_service"
-version = "3.1.1"
-dependencies = [
-	{org = "ballerina", name = "http"},
-	{org = "ballerinai", name = "observe"}
-]
-modules = [
-	{org = "choreo", packageName = "echo_service", moduleName = "echo_service"}
 ]
 
