@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
-app = Flask(__name__) # Create a Flask app
-
+# Create a Flask app
+app = Flask(__name__) 
 # HTTP (post) echo endpoint
 @app.route('/echo', methods=['POST']) 
 def echo():
