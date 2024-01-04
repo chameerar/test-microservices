@@ -3,14 +3,15 @@ info:
   title:  Echo Service - Python REST API
   version:  1.0.0
 servers:
-  - url: "{server}:{port}/"
-    variables:
-      server:
-        default: http://localhost
-      port:
-        default: "8090"
+  - url: http://localhost:8090
 paths:
-  /:
+  /health:
+    get:
+      operationId: checkHealth
+      responses: 
+        "200":
+          description: "Health check successful!"
+    /:
     post:
       operationId: postEchoMessage
       requestBody:
