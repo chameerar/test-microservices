@@ -1,20 +1,21 @@
-openapi:  3.0.3
+openapi: 3.0.3
 info:
-  title:  Echo Service - Python REST API
-  version:  1.0.0
+  title: Echo Service - Python REST API
+  version: 1.0.0
 servers:
   - url: http://localhost:8090
 paths:
   /health:
     get:
       operationId: checkHealth
-      responses: 
+      responses:
         "200":
-          description: "Health check successful!"
-    /:
+          description: Health check successful!
+  /:
     post:
       operationId: postEchoMessage
       requestBody:
+        required: true
         content:
           application/json:
             schema:
@@ -22,6 +23,10 @@ paths:
       responses:
         "200":
           description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EchoRequest"
         "202":
           description: Accepted
         "400":
@@ -57,9 +62,9 @@ components:
           description: Relevant HTTP status code
           format: int32
     EchoRequest:
+      type: object
       required:
         - text
-      type: object
       properties:
         text:
           type: string
