@@ -3,7 +3,7 @@ info:
   title:  Echo Service - Python REST API
   version:  1.0.0
 servers:
-  - url: "{server}:{port}/main"
+  - url: "{server}:{port}/"
     variables:
       server:
         default: http://localhost
